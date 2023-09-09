@@ -76,20 +76,33 @@ resource "google_compute_address" "nat" {
   depends_on = [google_project_service.compute]
 }
 
-resource "google_compute_firewall" "allow-ssh" {
-  name    = "allow-ssh"
+resource "google_compute_firewall" "allow-http" {
+  name    = "allow-http"
   network = google_compute_network.main.name
 
   allow {
-    protocol = "icmp"
+    protocol = "tcp"
+    ports    = ["80"]
   }
 
   allow {
     protocol = "tcp"
-    ports    = ["22"]
+    ports    = ["443"]
   }
 
   source_ranges = ["0.0.0.0/0"]
+}
+
+
+resource "google_compute_firewall" "allow-vpns" {
+  name    = "allow-vpns"
+  network = google_compute_network.main.name
+
+  allow {
+    protocol = "all"
+  }
+
+  source_ranges = ["10.26.32.12", "19.104.105.29"]
 }
 
 resource "google_compute_global_address" "peering_address" {

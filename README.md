@@ -24,8 +24,10 @@ If you have any questions about this process, please speak to your recruitment c
 ### 1. Docker
 A basic TypeScript application has been created in the `application` folder. Create a Dockerfile to build this application, making sure that it runs on your local device.
 
+answer: checkout the dockerfile
+
 ### 2. CI/CD
- - :arrow_forward: Github Actions
+ - :arrow_forward: Github Actions 
  - :arrow_forward: Argo Workflows
 
 Write a YAML-based or Kubernetes-based CI/CD pipeline to build, push and deploy this docker image to some Google Kubernetes Engine cluster.
@@ -35,6 +37,8 @@ Create Kubernetes resource definitions needed to deploy the application and incl
 Use whatever mechanism/tools you think are appropriate/relevant to deploy the application.
 
 NOTE: This pipeline does not have to be fully active. All we're looking for is the YAML file. Minor syntax errors will be overlooked.
+
+answer : checkout the `application.yaml` and `.github/workflows/cicd.yaml` files
 
 ### 3. Infrastructure as Code
  - :arrow_forward: Terraform CDK in TypeScript
@@ -49,6 +53,10 @@ Consider other general security best practices.
 
 Other configuration can be decided by yourself, based on the instance being used for a low resource usage, low traffic web application.
 
+answer: 
+all terraform files are in `core-resources/` folder , to run this you have to login to your gcp account and create a project first
+then you can run terraform apply to run all resources in your project
+
 ## Questions
 
  1. How long did you spend on this assessment in total?\
@@ -59,10 +67,11 @@ around 2 hr in total or maybe a bit more
 
  3. If you had an unlimited amount of time to complete this task, what would you have done differently?\
 - modulize my terraform code and have the code written according to best practice, use more parameters 
-- actually install argocd to fully show the cd proccess with argocd
-- gke setup would have more features enabled.
+- use some storage backend for state files
+- gke setup would have more features enabled and actually install argocd
 - use encrypted var setup for db users
 - use atrifactory instead of container registery
+
 
 
 ####
