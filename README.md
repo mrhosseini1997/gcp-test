@@ -62,7 +62,7 @@ around 2 hr in total or maybe a bit more
 - actually install argocd to fully show the cd proccess with argocd
 - gke setup would have more features enabled.
 - use encrypted var setup for db users
-
+- use atrifactory instead of container registery
 
 
 ####
