@@ -1,6 +1,6 @@
 variable "project_id" {
   description = "project id"
-  default = "sisutech71819"
+  default = "xxxx"
 }
 
 variable "region" {
@@ -19,4 +19,14 @@ variable "roles" {
     "roles/cloudtrace.agent"
   ]
   description = "list of roles for the node pool service account."
+}
+
+variable "db_name" {
+  description = "db name"
+  default = ""
+}
+
+variable "cluster_name" {
+  description = "cluster name"
+  default = ""
 }

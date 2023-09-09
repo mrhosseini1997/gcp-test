@@ -1,5 +1,5 @@
 resource "google_sql_database_instance" "instance" {
-  name             = "examplesql"
+  name             = var.db_name
   region           = var.region
   database_version = "MYSQL_8_0"
   settings {
@@ -19,7 +19,7 @@ resource "google_sql_database_instance" "instance" {
 }
 
 resource "google_sql_database" "database" {
-  name     = "examplesql"
+  name     = var.db_name
   instance = google_sql_database_instance.instance.name
 }
 
