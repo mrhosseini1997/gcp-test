@@ -55,7 +55,7 @@ Other configuration can be decided by yourself, based on the instance being used
 
 answer: 
 all terraform files are in `core-resources/` folder , to run this you have to login to your gcp account and create a project first
-then you can run terraform apply to run all resources in your project
+then you can run terraform apply to run all resources in your project this part i assume is not needed to provide detail so won't paste the steps here
 
 ## Questions
 
