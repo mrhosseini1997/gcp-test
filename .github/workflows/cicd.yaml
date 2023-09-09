@@ -13,6 +13,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - application/**
+      - kubernetes/**
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
