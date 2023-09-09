@@ -16,6 +16,6 @@ spec:
         spec:
             containers:
                 - name: express
-                  image: express
+                  image: gcr.io/sisutech71819/sampleapp:f01c8e767a248299270dfd4f32a481fa0c976bbb
                   ports:
                       - containerPort: 3000
