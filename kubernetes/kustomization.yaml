@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- "deployment.yaml"
+- "service.yaml"
+images:
+- name: "express"
+  newName: "gcr.io/sisutech71819/sampleapp"
+  newTag: "66b2665109a6c7fef671cbf1edd21fa4a7abe52383e7899d80ecbecea953927a"
+namespace: "your-team-namespace"
