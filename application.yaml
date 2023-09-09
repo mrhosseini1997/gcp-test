@@ -1,3 +1,4 @@
+# this is just a demo file to show that this is how you define this deployment in argocd , it's not supposed to work
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -6,7 +7,7 @@ metadata:
 spec:
   project: test-project
   source:
-    repoURL: https://github.com/xxxx/xxxx.git
+    repoURL: https://github.com/mrhosseini1997/gcp-test.git
     targetRevision: HEAD
     path: kubernetes
   destination:
